@@ -16,23 +16,23 @@ hbs.registerPartials(partialspath)
 
 app.get('', (req, res) => {
     res.render('index', {
-        title: 'Weather',
-        name: 'ab'
+        title: 'Weather App',
+        name: 'Abhinav'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About Me',
-        name: 'Andrew Mead'
+        name: 'Abhinav'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'help',
-        contact: 'sriraj@example.com',
-        name: 'ab'
+        title: 'Help',
+        contact: 'srirajabhinav@gmail.com',
+        name: 'Abhinav'
     })
 })
 

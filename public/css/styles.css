@@ -1,25 +1,26 @@
-body{
-    color: #333333;
-    font-family: arial;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
 
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-
-}
 .main-content{
     flex-grow: 1;
 }
-
-footer{
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top:8px;
-    padding: 8px 0;
+form {
+    margin-left: 15px;
+    margin-top: -15px;
 }
+img{
+    margin-left: 15px;
+    margin-top: -15px;
+}
+h4 a{
+    color: darkgray;
+
+    margin-left: 15px;
+    margin-top: -15px;
+}
+p {
+    margin-left: 15px;
+    margin-top: -15px;
+}
+
 header{
     margin-top:16px;
     margin-bottom:48px;
@@ -32,7 +33,91 @@ header a{
     color: #888888;
     margin-right: 16px;
     text-decoration: none;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    border-radius: 3px;
 }
 .portrait{
     width: 250px;
+}
+
+header a:hover {
+    background-color: #666;
+    color: white;
+  }
+a {
+    color: black;
+}
+body{
+    top:0px;
+    left:0px;
+    
+   
+}
+
+.video-container{
+    color: #333333; 
+    font-family: arial;
+    width: 100%;
+       
+    display:flex;
+    left: 0px;
+        top: 0px;
+    position: fixed;
+    z-index: -1;
+    object-fit: cover;
+}
+
+section{
+
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    
+}
+footer{
+    color: #888888;
+    
+    margin-top:340px;
+    padding: 8px 0;
+    font-family: monospace;
+    float: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 15px;
+}
+.weather-results{
+    margin-left: 40%;
+    margin-top: -100px;
+    font-size: large;
+}
+input{
+    
+    height: 25px;
+    opacity:60% ;
+    border-style: hidden;
+    
+    
+}
+button{
+    height:30px;
+    opacity: 60%;
+  
+}
+
+#current-location{
+    margin-top: 100px;
+    margin-left: 15px;
+}
+
+@media screen and (max-width:650px){
+    
 }
