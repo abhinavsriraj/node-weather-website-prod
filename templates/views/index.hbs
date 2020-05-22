@@ -12,19 +12,17 @@
 <section>
     <div class='main-content'>
         {{>header}}
-        <form>
+        <form  >
             <h4>Search Weather</h4>
             <input placeholder="Location" type="text">
             <button>search</button>
-            
-            <div class="weather-results" >
-                <p id='message-1'></p>
-                <p id='message-2'></p>
-            </div>
         </form>
-        <button id="current-location" >Current Location</button>
+        <button class="current-location" ><img src="/img/pin2.png" alt=""></button>
+        <div class="weather-results" >
+            <p id='message-1'></p>
+            <p id='message-2'></p>
+        </div>
     </div>
-
     
     <script src="/js/app.js"></script>
 </section>

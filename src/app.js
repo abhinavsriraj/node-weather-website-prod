@@ -66,6 +66,26 @@ app.get('/weather', (req, res) => {
     }
 })
 
+app.get('/weatherAtCurrentLocation', (req, res) => {
+   
+    const latitude = req.query.latitude
+    const longitude = req.query.longitude
+    
+    forecast(latitude, longitude, (error, forecastData) => {
+        if (error) {
+            return res.send({
+                error: error
+            })
+        }
+        res.send({
+            forecast: forecastData,
+            Searched_address: req.query.address
+        })
+    })
+})
+
+
+
 app.get('/products', (req, res) => {
     if (!req.query.search) {
         res.send({
