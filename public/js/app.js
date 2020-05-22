@@ -6,7 +6,7 @@ const messagetwo = document.querySelector('#message-2')
 document.addEventListener("DOMContentLoaded", function(){
     navigator.geolocation.getCurrentPosition((position)=>{
         messageone.textContent = 'Fetching Weather at your current Location'
-        fetch('http://localhost:5000/weatherAtCurrentLocation?latitude='+position.coords.latitude+'&longitude='+position.coords.longitude+'').then((response)=>{
+        fetch('/weatherAtCurrentLocation?latitude='+position.coords.latitude+'&longitude='+position.coords.longitude+'').then((response)=>{
             response.json().then((data)=>{
                 if (data.error) {
                     messageone.textContent = data.error
@@ -26,7 +26,7 @@ document.querySelector('.current-location').addEventListener('click',()=>{
     navigator.geolocation.getCurrentPosition((position)=>{
         messageone.textContent = 'Fetching Weather at your current Location'
 
-        fetch('http://localhost:5000/weatherAtCurrentLocation?latitude='+position.coords.latitude+'&longitude='+position.coords.longitude+'').then((response)=>{
+        fetch('/weatherAtCurrentLocation?latitude='+position.coords.latitude+'&longitude='+position.coords.longitude+'').then((response)=>{
             response.json().then((data)=>{
                 if (data.error) {
                     messageone.textContent = data.error
@@ -45,7 +45,7 @@ weatherform.addEventListener('submit', (e) => {
     console.log(search.value)
     messageone.textContent = 'Fetching...'
 
-    fetch('http://localhost:5000/weather?address=' +  search.value + '').then((response) => {
+    fetch('/weather?address=' +  search.value + '').then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 messageone.textContent = data.error
