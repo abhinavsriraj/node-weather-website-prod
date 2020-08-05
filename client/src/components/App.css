@@ -1,0 +1,20 @@
+.mainContent{
+    color:black;
+    align-content: center;
+    margin-top: 25px;
+    margin-left: 350px;
+    
+    
+}
+.videoContainer{
+    width: 100vw;
+    display: flex;
+    z-index: -1;
+    position: fixed;
+}
+footer{
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    color: darkgrey;
+}

@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 5000
@@ -14,6 +15,8 @@ app.set('view engine', 'hbs')
 app.use(express.static(publicDirectoryPath))
 app.set('views', viewspath)
 hbs.registerPartials(partialspath)
+app.use(cors())
+
 
 app.get('', (req, res) => {
     res.render('index', {
